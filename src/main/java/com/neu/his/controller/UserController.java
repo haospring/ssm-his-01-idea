@@ -20,17 +20,7 @@ public class UserController {
 
 	@RequestMapping(value = "/userController", params = "act=getUser")
 	public void getUserListMethod(HttpServletRequest req, String keywords) {
-		List<Map<String, Object>> userList = userService.getUserList(1, 5, keywords);
-		for (Map<String, Object> map : userList) {
-			Set<Entry<String, Object>> entrySet = map.entrySet();
-			for (Entry<String, Object> entry : entrySet) {
-				String key = entry.getKey();
-				Object value = entry.getValue();
-				System.out.println(key + "---" + value);
-				req.setAttribute("key", key);
-				req.setAttribute("value", value);
-			}
-		}
+
 	}
 
 	@RequestMapping(value = "/userController", params = "act=getUserCount")

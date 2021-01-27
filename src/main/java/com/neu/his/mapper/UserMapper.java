@@ -1,7 +1,6 @@
 package com.neu.his.mapper;
 
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -12,23 +11,24 @@ import com.neu.his.pojo.User;
  * @author 14727
  * @description 继承了BaseMapper，并继承了对用户表的操作方法封装
  */
+@Mapper
 public interface UserMapper extends BaseMapper {
     /**
      * 按照条件进行用户信息查询，并将查询的信息进行分页显示
      *
      * @param page 当前页，count每页显示的记录数，keywords查询关键字
-     * @return 包含查询结果的Map集合
+     * @return 包含查询结果的user类型
      */
-    List<Map<String, Object>> getUserList(@Param("page") int page, @Param("count") int count,
+    List<User> getUserList(@Param("page") int page, @Param("count") int count,
                                           @Param("keywords") String keywords);
 
     /**
      * 按照条件进行用户信息查询，并将查询的信息进行分页显示（排班规则的医生查询方法）
      *
      * @param page 当前页，count每页显示的记录数，keywords、keywords2、keywords3
-     * @return 包含查询结果的Map集合
+     * @return 包含查询结果的user类型
      */
-    List<Map<String, Object>> getUserList02(@Param("page") Integer page, @Param("count") Integer count,
+    List<User> getUserList02(@Param("page") Integer page, @Param("count") Integer count,
                                             @Param("keywords") String keywords, @Param("keywords2") String keywords2,
                                             @Param("keywords3") String keywords3);
 
@@ -51,7 +51,7 @@ public interface UserMapper extends BaseMapper {
 
     /**
      * 根据用户选择的id进行删除操作，对应getUserList方法
-     *
+     * 参数也可以定义为字符串型数组
      * @param ids
      * @return int
      */
@@ -59,7 +59,7 @@ public interface UserMapper extends BaseMapper {
 
     /**
      * 根据用户选择的id进行删除操作，对应getUserList02方法
-     *
+     * 参数也可以定义为字符串型数组
      * @param ids
      * @return int
      */
@@ -70,9 +70,7 @@ public interface UserMapper extends BaseMapper {
      *
      * @return 添加成功--1，添加失败--0
      */
-    int addUser(Map<String, Object> users);
-
-    int addUser02(User user);
+    int addUser(User user);
 
     /**
      * 更新用户信息
@@ -80,7 +78,6 @@ public interface UserMapper extends BaseMapper {
      * @param
      * @return 更新成功--1，更新失败--0
      */
-    int updateUser(Map<String, Object> user);
 
     int updateUserById(User user);
 
@@ -90,8 +87,14 @@ public interface UserMapper extends BaseMapper {
      * @param user 包含用户信息的map对象
      * @return 登陆成功--1，登录失败--0
      */
-    int login(Map<String, Object> user);
+    int login(User user);
 
+    /**
+     *
+     * @param username 用户名
+     * @param password 密码
+     * @return 登陆成功--1，登录失败--0
+     */
     int login02(@Param("username") String username, @Param("password") String password);
 
     /**

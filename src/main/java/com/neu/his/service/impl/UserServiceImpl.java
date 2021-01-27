@@ -13,80 +13,61 @@ import com.neu.his.service.UserService;
 
 /**
  * 用户管理专属的服务层实现类
- * 
- * @author 14727
  *
+ * @author 14727
  */
 
 @Transactional
 @Service("userServiceImpl")
 public class UserServiceImpl implements UserService {
 
-	@Autowired
-	private UserMapper userMapper;
+    @Autowired
+    private UserMapper userMapper;
 
-	@Override
-	public int getUserCount(String keywords) {
-		return userMapper.getUserCount(keywords);
-	}
 
-	@Override
-	public int getUserCount02(String keywords, String keywords2, String keywords3) {
-		return userMapper.getUserCount02(keywords, keywords2, keywords3);
-	}
+    @Override
+    public int getUserCount(String keywords) {
+        return userMapper.getUserCount(keywords);
+    }
 
-	@Override
-	public List<Map<String, Object>> getUserList(Integer page, Integer count, String keywords) {
+    @Override
+    public int getUserCount02(String keywords, String keywords2, String keywords3) {
+        return userMapper.getUserCount02(keywords,keywords2,keywords3);
+    }
 
-		return userMapper.getUserList(page, count, keywords);
-	}
+    @Override
+    public List<User> getUserList(Integer page, Integer count, String keywords) {
+        return userMapper.getUserList(page, count, keywords);
+    }
 
-	@Override
-	public List<Map<String, Object>> getUserList02(Integer page, Integer count, String keywords, String keywords2,
-			String keywords3) {
-		return userMapper.getUserList02(page, count, keywords, keywords2, keywords3);
-	}
+    @Override
+    public List<User> getUserList02(Integer page, Integer count, String keywords, String keywords2, String keywords3) {
+        return userMapper.getUserList02(page, count, keywords, keywords2, keywords3);
+    }
 
-	@Override
-	public boolean deleteUserByIds(int[] ids) {
-		int result = userMapper.deleteUserByIds(ids);
-		// 如果数组中的长度与删除的返回值相等，则意味着删除成功
-		return result == ids.length;
-	}
+    @Override
+    public boolean deleteUserByIds(int[] ids) {
+        int result = userMapper.deleteUserByIds(ids);
+        return result == ids.length;
+    }
 
-	@Override
-	public int updateUser(Map<String, Object> user) {
-		return userMapper.updateUser(user);
-	}
-	
-	@Override
-	public int updateUserById(User user) {
-		return userMapper.updateUserById(user);
-	}
+    @Override
+    public int updateUserById(User user) {
+        return userMapper.updateUserById(user);
+    }
 
-	@Override
-	public int login(Map<String, Object> user) {
-		return userMapper.login(user);
-	}
-	
-	@Override
-	public int login02(String username, String password) {
-		return userMapper.login02(username, password);
-	}
+    @Override
+    public int login02(String username, String password) {
+        return userMapper.login02(username,password);
+    }
 
-	@Override
-	public int addUser(Map<String, Object> user) {
-		return userMapper.addUser(user);
-	}
-	
-	@Override
-	public int addUser02(User user) {
-		return userMapper.addUser02(user);
-	}
+    @Override
+    public int addUser(User user) {
+        return userMapper.addUser(user);
+    }
 
-	@Override
-	public User getUserBean(String keywords, String keywords2) {
-		return userMapper.getUserBean(keywords, keywords2);
-	}
-
+    @Override
+    public User getUserBean(String keywords, String keywords2) {
+        return userMapper.getUserBean(keywords,keywords2);
+    }
 }

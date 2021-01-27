@@ -3,25 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.neu.his.mapper.UserMapper">
-    <select id="getUserList" resultType="map">
-        select a.UserName,
-        a.RealName,
-        a.UseType,
-        a.DocTitleID,
-        a.IsScheduling,
-        a.DelMark,
+    <select id="getUserList" resultType="user">
+        select
+        a.userName,
+        a.realName,
+        a.useType,
+        a.docTitleID,
+        a.deptID,
+        a.registLeID,
+        a.delMark,
         b.*,
         c.*,
         d.*
         from User a,ConstantItem b,Department c,RegistLevel d
-        where a.DocTitleID=b.id and a.DeptID=c.id and a.RegistLeID=d.id
+        where  a.doctitleid=b.id and a.deptid=c.id and a.registleid=d.id
         <if test="keywords!=null">
-            and (UserName like concat('%',#{keywords},'%')
+            and (username like concat('%',#{keywords},'%')
         </if>
         <if test="keywords!=null">
-            or RealName like concat('%',#{keywords},'%'))
+            or realName like concat('%',#{keywords},'%'))
         </if>
-        order by a.id limit #{page},#{count}
+        order by a.id desc limit #{page},#{count}
     </select>
 
     <!-- 统计用户记录，针对getUserList -->
@@ -54,9 +56,9 @@
     </select>
 
     <!-- 医生角色完成用户信息的查询 -->
-    <select id="getUserList02" resultType="map">
-        select a.username,a.realname,a.id,a.registLeId
-        from User a where 1=1
+    <select id="getUserList02" resultType="user">
+        select a.username,a.realname,a.id,a.registLeId from User a
+        where 1=1
         <if test="keywords!=null and keywords!=''">
             and deptid=#{keywords}
         </if>
@@ -85,16 +87,7 @@
     </delete>
 
     <!-- 添加用户信息 -->
-    <insert id="addUser" parameterType="map">
-        insert into User
-        set UserName=#{userName},
-            Password=#{password},
-            RealName=#{realName},
-            DeptID=#{deptID}
-
-    </insert>
-
-    <insert id="addUser02" parameterType="user">
+    <insert id="addUser" parameterType="user">
         insert into User
         set UserName=#{userName},
             Password=#{password},
@@ -107,7 +100,7 @@
     </insert>
 
     <!-- 更新用户信息 -->
-    <update id="updateUser" parameterType="map">
+    <update id="updateUserById" parameterType="user">
         update User
         set UserName=#{userName},
             Password=#{password},
@@ -120,29 +113,7 @@
         where id = #{id}
     </update>
 
-    <update id="updateUserById" parameterType="user">
-        update User
-        set userName=#{userName},
-            password=#{password},
-            realName=#{realName},
-            IsScheduling=#{isScheduling},
-            deptID=#{deptID},
-            registLeID=#{registLeID}
-        where id = #{id}
-    </update>
-
     <!-- 登录 -->
-    <select id="login" parameterType="map" resultType="_int">
-        select count(*) from User
-        <where>
-            <if test="userName!=null and userName!=''">
-                and username=#{userName}
-            </if>
-            <if test="password!=null and password!=''">
-                and password=#{password}
-            </if>
-        </where>
-    </select>
 
     <select id="login02" resultType="_int">
         select count(*) from User
