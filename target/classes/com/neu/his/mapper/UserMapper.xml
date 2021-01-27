@@ -90,11 +90,8 @@
         set UserName=#{userName},
             Password=#{password},
             RealName=#{realName},
-            UseType=#{useType},
-            DocTitleID=#{docTitleID},
-            IsScheduling=#{isScheduling},
-            DeptID=#{deptID},
-            RegistLeID=#{registLeID}
+            DeptID=#{deptID}
+
     </insert>
 
     <insert id="addUser02" parameterType="user">
@@ -161,6 +158,9 @@
 
     <!--获取user对象-->
     <select id="getUserBean" resultType="user">
-        select * from User where username=#{keywords} and password=#{keywords2};
+        select *
+        from User
+        where username = #{keywords}
+          and password = #{keywords2};
     </select>
 </mapper>
