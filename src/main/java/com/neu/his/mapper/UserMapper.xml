@@ -12,11 +12,12 @@
         a.deptID,
         a.registLeID,
         a.delMark,
+        a.IsScheduling,
         b.*,
         c.*,
         d.*
         from User a,ConstantItem b,Department c,RegistLevel d
-        where  a.doctitleid=b.id and a.deptid=c.id and a.registleid=d.id
+        where a.doctitleid=b.id and a.deptid=c.id and a.registleid=d.id
         <if test="keywords!=null">
             and (username like concat('%',#{keywords},'%')
         </if>
@@ -57,7 +58,7 @@
 
     <!-- 医生角色完成用户信息的查询 -->
     <select id="getUserList02" resultType="user">
-        select a.username,a.realname,a.id,a.registLeId from User a
+        select a.username,a.realname,a.id,a.registLeId,a.IsScheduling from User a
         where 1=1
         <if test="keywords!=null and keywords!=''">
             and deptid=#{keywords}
@@ -102,19 +103,36 @@
     <!-- 更新用户信息 -->
     <update id="updateUserById" parameterType="user">
         update User
-        set UserName=#{userName},
-            Password=#{password},
-            RealName=#{realName},
-            UseType=#{useType},
-            DocTitleID=#{docTitleID},
-            IsScheduling=#{isScheduling},
-            DeptID=#{deptID},
-            RegistLeID=#{registLeID}
+        <set>
+            <if test="userName!=null and userName!=''">
+                UserName=#{userName},
+            </if>
+            <if test="password!=null and password!=''">
+                Password=#{password},
+            </if>
+            <if test="realName!=null and realName!=''">
+                RealName=#{realName},
+            </if>
+            <if test="useType!=null and useType!=0">
+                UseType=#{useType},
+            </if>
+            <if test="docTitleID!=null and docTitleID!=0">
+                DocTitleID=#{docTitleID},
+            </if>
+            <if test="isScheduling!=null and isScheduling!=''">
+                IsScheduling=#{isScheduling},
+            </if>
+            <if test="deptID!=null and deptID!=0">
+                DeptID=#{deptID},
+            </if>
+            <if test="registLeID!=null and registLeID!=0">
+                RegistLeID=#{registLeID}
+            </if>
+        </set>
         where id = #{id}
     </update>
 
     <!-- 登录 -->
-
     <select id="login02" resultType="_int">
         select count(*) from User
         <where>
@@ -131,7 +149,7 @@
     <select id="getUserBean" resultType="user">
         select *
         from User
-        where username = #{keywords}
-          and password = #{keywords2};
+        where username = #{username}
+          and password = #{password};
     </select>
 </mapper>

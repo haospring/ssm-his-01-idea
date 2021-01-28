@@ -98,10 +98,10 @@ public interface UserMapper extends BaseMapper {
     int login02(@Param("username") String username, @Param("password") String password);
 
     /**
-     * 根据条件查询返回用户对象
-     *
-     * @param keywords,keywords2
-     * @return User类型的对象
+     * 获取user对象
+     * @param keywords 用户名
+     * @param keywords2 密码
+     * @return
      */
-    User getUserBean(@Param("keywords") String keywords, @Param("keywords2") String keywords2);
+    User getUserBean(@Param("username") String keywords, @Param("password") String keywords2);
 }
