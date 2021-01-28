@@ -27,6 +27,30 @@
         order by a.id desc limit #{page},#{count}
     </select>
 
+    <select id="getUserListMap" resultType="map">
+        select
+        a.userName,
+        a.realName,
+        a.useType,
+        a.docTitleID,
+        a.deptID,
+        a.registLeID,
+        a.delMark,
+        a.IsScheduling,
+        b.*,
+        c.*,
+        d.*
+        from User a,ConstantItem b,Department c,RegistLevel d
+        where a.doctitleid=b.id and a.deptid=c.id and a.registleid=d.id
+        <if test="keywords!=null">
+            and (username like concat('%',#{keywords},'%')
+        </if>
+        <if test="keywords!=null">
+            or realName like concat('%',#{keywords},'%'))
+        </if>
+        order by a.id desc limit #{page},#{count}
+    </select>
+
     <!-- 统计用户记录，针对getUserList -->
     <select id="getUserCount" resultType="_int">
         select count(*) from User
@@ -133,6 +157,17 @@
     </update>
 
     <!-- 登录 -->
+    <select id="login" resultType="_int">
+        select count(*) from User
+        <where>
+            <if test="username!=null and username!=''">
+                and username=#{username}
+            </if>
+            <if test="password!=null and password!=''">
+                and password=#{password}
+            </if>
+        </where>
+    </select>
     <select id="login02" resultType="_int">
         select count(*) from User
         <where>

@@ -3,6 +3,7 @@ package com.neu.his.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import com.neu.his.pojo.RespBean;
+import com.neu.his.pojo.TU;
 import com.neu.his.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,6 +13,7 @@ import com.neu.his.service.UserService;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 14727
@@ -22,7 +24,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/his/user")
-@CrossOrigin(origins = "*",maxAge = 3600)
+@CrossOrigin(origins = "*")
 public class UserController {
     /**
      * 声明成员属性userService，完成自动注入
@@ -41,6 +43,19 @@ public class UserController {
         int counts = userService.getUserCount(keywords);
         List<User> userList = userService.getUserList(0, counts, keywords);
         return userList;
+    }
+
+    /**
+     * @param request  请求对象可以获取参数值
+     * @param keywords 接受用户的查询条件
+     * @return 返回查询到的数据的map映射的集合
+     */
+    @RequestMapping("/allMap")
+    public List<Map<String, Object>> getUserListMap(HttpServletRequest request, String keywords) {
+        // 声明counts用来接受数据库中所有的查询到的行数
+        int counts = userService.getUserCount(keywords);
+        List<Map<String, Object>> userListMap = userService.getUserListMap(0, counts, keywords);
+        return userListMap;
     }
 
     /**
@@ -79,15 +94,6 @@ public class UserController {
      */
     @RequestMapping("/add")
     public RespBean addUser(HttpServletRequest request, User user) {
-        user = new User();
-        user.setUserName("天蓬元帅");
-        user.setPassword("tianpeng");
-        user.setRealName("猪八戒");
-        user.setDocTitleID(3);
-        user.setIsScheduling("是");
-        user.setDeptID(3);
-        user.setRegistLeID(1);
-
         int flag = userService.addUser(user);
         if (flag == 1) {
             return new RespBean("success", "添加成功");
@@ -132,11 +138,25 @@ public class UserController {
         System.out.println(password);
         User user = userService.getUserBean(username, password);
         if (user != null) {
-            request.getSession().setAttribute("login_user",user);
+            request.getSession().setAttribute("login_user", user);
             // 记录状态的整型值，状态的标识值，信息，对象
             return new RespBean(0, "success", "登陆成功", user);
         } else {
-            return new RespBean(1,"error", "登录失败");
+            return new RespBean(1, "error", "登录失败");
+        }
+    }
+
+    @RequestMapping("login_entity")
+    public RespBean login_entity(HttpServletRequest request, TU tu) {
+        System.out.println(tu.getKeywords());
+        System.out.println(tu.getKeywords2());
+        User user = userService.getUserBean(tu.getKeywords(), tu.getKeywords2());
+        if (user != null) {
+            request.getSession().setAttribute("login_user", user);
+            // 记录状态的整型值，状态的标识值，信息，对象
+            return new RespBean(0, "success", "登陆成功", user);
+        } else {
+            return new RespBean(1, "error", "登录失败");
         }
     }
 }
