@@ -1,26 +1,26 @@
 package com.neu.his.pojo;
 
 public class User {
-	private int id;
+	private String id;
 	private String userName;
 	private String password;
 	private String realName;
-	private int useType;
-	private int docTitleID;
+	private String useType;
+	private String docTitleID;
 	private String isScheduling;
-	private int deptID;
-	private int registLeID;
-	private int delMark;
+	private String deptID;
+	private String registLeID;
+	private String delMark;
 
 	public User() {
 		super();
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -48,19 +48,19 @@ public class User {
 		this.realName = realName;
 	}
 
-	public int getUseType() {
+	public String getUseType() {
 		return useType;
 	}
 
-	public void setUseType(int useType) {
+	public void setUseType(String useType) {
 		this.useType = useType;
 	}
 
-	public int getDocTitleID() {
+	public String getDocTitleID() {
 		return docTitleID;
 	}
 
-	public void setDocTitleID(int docTitleID) {
+	public void setDocTitleID(String docTitleID) {
 		this.docTitleID = docTitleID;
 	}
 
@@ -72,27 +72,27 @@ public class User {
 		this.isScheduling = isScheduling;
 	}
 
-	public int getDeptID() {
+	public String getDeptID() {
 		return deptID;
 	}
 
-	public void setDeptID(int deptID) {
+	public void setDeptID(String deptID) {
 		this.deptID = deptID;
 	}
 
-	public int getRegistLeID() {
+	public String getRegistLeID() {
 		return registLeID;
 	}
 
-	public void setRegistLeID(int registLeID) {
+	public void setRegistLeID(String registLeID) {
 		this.registLeID = registLeID;
 	}
 
-	public int getDelMark() {
+	public String getDelMark() {
 		return delMark;
 	}
 
-	public void setDelMark(int delMark) {
+	public void setDelMark(String delMark) {
 		this.delMark = delMark;
 	}
 

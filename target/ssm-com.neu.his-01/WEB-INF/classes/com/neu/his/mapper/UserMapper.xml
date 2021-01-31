@@ -6,6 +6,7 @@
     <select id="getUserList" resultType="user">
         select
         a.userName,
+        a.password,
         a.realName,
         a.useType,
         a.docTitleID,
@@ -13,9 +14,9 @@
         a.registLeID,
         a.delMark,
         a.IsScheduling,
-        b.*,
-        c.*,
-        d.*
+        b.ConstantName,
+        c.DeptName,
+        d.RegistName
         from User a,ConstantItem b,Department c,RegistLevel d
         where a.doctitleid=b.id and a.deptid=c.id and a.registleid=d.id
         <if test="keywords!=null">
@@ -29,7 +30,9 @@
 
     <select id="getUserListMap" resultType="map">
         select
+        a.ID,
         a.userName,
+        a.password,
         a.realName,
         a.useType,
         a.docTitleID,
@@ -37,9 +40,9 @@
         a.registLeID,
         a.delMark,
         a.IsScheduling,
-        b.*,
-        c.*,
-        d.*
+        b.ConstantName,
+        c.DeptName,
+        d.RegistName
         from User a,ConstantItem b,Department c,RegistLevel d
         where a.doctitleid=b.id and a.deptid=c.id and a.registleid=d.id
         <if test="keywords!=null">

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.neu.his.service.UserService;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -46,16 +47,21 @@ public class UserController {
     }
 
     /**
-     * @param request  请求对象可以获取参数值
-     * @param keywords 接受用户的查询条件
-     * @return 返回查询到的数据的map映射的集合
+     * 查询用户个数和用户信息的map集合
+     *
+     * @param request  请求对象
+     * @param keywords 查询关键字
+     * @return 包括查询个数和用户信息的map集合
      */
     @RequestMapping("/allMap")
-    public List<Map<String, Object>> getUserListMap(HttpServletRequest request, String keywords) {
+    public Map<String, Object> getUserListMap02(HttpServletRequest request, String keywords) {
         // 声明counts用来接受数据库中所有的查询到的行数
         int counts = userService.getUserCount(keywords);
         List<Map<String, Object>> userListMap = userService.getUserListMap(0, counts, keywords);
-        return userListMap;
+        Map<String, Object> map = new HashMap<>();
+        map.put("counts", String.valueOf(counts));
+        map.put("userListMap", userListMap);
+        return map;
     }
 
     /**
@@ -78,8 +84,8 @@ public class UserController {
      * @return RespBean 该实体封装了响应信息（成功||失败）
      */
     @RequestMapping("/deleteByIds")
-    public RespBean deleteUserByIds(HttpServletRequest request, Integer id) {
-        boolean flag = userService.deleteUserByIds(new int[]{id});
+    public RespBean deleteUserByIds(HttpServletRequest request, String id) {
+        boolean flag = userService.deleteUserByIds(new int[]{Integer.parseInt(id)});
         if (flag) {
             return new RespBean("success", "删除成功");
         } else {
@@ -109,15 +115,7 @@ public class UserController {
      */
     @RequestMapping("/update")
     public RespBean updateUserById(HttpServletRequest request, User user) {
-        user = new User();
-        user.setId(24);
-        user.setUserName("天蓬元帅");
-        user.setPassword("laozhu");
-        user.setRealName("猪八戒");
-        user.setDocTitleID(3);
-        user.setIsScheduling("是");
-        user.setDeptID(3);
-        user.setRegistLeID(1);
+
         int flag = userService.updateUserById(user);
         if (flag == 1) {
             return new RespBean("success", "更新成功");

@@ -39,11 +39,11 @@ public class TestUser {
 		user.setUserName("xiaowang");
 		user.setPassword("wang");
 		user.setRealName("小王");
-		user.setUseType(4);
-		user.setDocTitleID(1);
+		user.setUseType("4");
+		user.setDocTitleID("1");
 		user.setIsScheduling("1");
-		user.setDeptID(3);
-		user.setRegistLeID(1);
+		user.setDeptID("3");
+		user.setRegistLeID("1");
 
 		System.out.println(userService.addUser(user));
 	}
@@ -51,14 +51,14 @@ public class TestUser {
 	@Test
 	public void testUpdateUserById() {
 		User user = new User();
-		user.setId(16);
+		user.setId("16");
 		user.setUserName("齐天大圣");
 		user.setPassword("dasheng");
 		user.setRealName("孙悟空");
-		user.setDocTitleID(3);
+		user.setDocTitleID("3");
 		user.setIsScheduling("否");
-		user.setDeptID(3);
-		user.setRegistLeID(1);
+		user.setDeptID("3");
+		user.setRegistLeID("1");
 
 		userService.updateUserById(user);
 	}
