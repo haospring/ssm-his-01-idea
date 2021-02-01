@@ -775,1720 +775,1730 @@ SELECT|sys.sys_config
 </ObjectGrants>
     </user>
     <user id="240" parent="1" name="root">
-      <Host>114.96.200.27</Host>
+      <Host>114.96.200.23</Host>
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
     <user id="241" parent="1" name="root">
-      <Host>114.96.201.115</Host>
+      <Host>114.96.200.27</Host>
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
     <user id="242" parent="1" name="root">
+      <Host>114.96.201.115</Host>
+      <ObjectGrants>ALL PRIVILEGES!
+</ObjectGrants>
+    </user>
+    <user id="243" parent="1" name="root">
       <Host>114.96.203.86</Host>
       <ObjectGrants>ALL PRIVILEGES
 </ObjectGrants>
     </user>
-    <user id="243" parent="1" name="root">
+    <user id="244" parent="1" name="root">
       <Host>117.57.160.20</Host>
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <user id="244" parent="1" name="root">
+    <user id="245" parent="1" name="root">
       <Host>117.57.161.132</Host>
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <user id="245" parent="1" name="root">
+    <user id="246" parent="1" name="root">
       <Host>117.57.161.185</Host>
       <ObjectGrants>ALL PRIVILEGES
 </ObjectGrants>
     </user>
-    <user id="246" parent="1" name="root">
+    <user id="247" parent="1" name="root">
       <Host>117.57.161.215</Host>
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <user id="247" parent="1" name="root">
+    <user id="248" parent="1" name="root">
       <Host>39.144.35.190</Host>
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <user id="248" parent="1" name="root">
+    <user id="249" parent="1" name="root">
+      <Host>39.144.35.230</Host>
+      <ObjectGrants>ALL PRIVILEGES!
+</ObjectGrants>
+    </user>
+    <user id="250" parent="1" name="root">
       <Host>localhost</Host>
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <table id="249" parent="4" name="CheckApply"/>
-    <table id="250" parent="4" name="CheckRelation"/>
-    <table id="251" parent="4" name="CheckTemplate"/>
-    <table id="252" parent="4" name="ConstantItem"/>
-    <table id="253" parent="4" name="ConstantType"/>
-    <table id="254" parent="4" name="Department"/>
-    <table id="255" parent="4" name="DiseCategory"/>
-    <table id="256" parent="4" name="Disease"/>
-    <table id="257" parent="4" name="Drugs"/>
-    <table id="258" parent="4" name="DrugsDetailed"/>
-    <table id="259" parent="4" name="DrugsTemplate"/>
-    <table id="260" parent="4" name="ExpenseClass"/>
-    <table id="261" parent="4" name="Fmeditem"/>
-    <table id="262" parent="4" name="HerbalDetailed"/>
-    <table id="263" parent="4" name="HerbalPrescription"/>
-    <table id="264" parent="4" name="HerbalTempDetailed"/>
-    <table id="265" parent="4" name="HerbalTemplate"/>
-    <table id="266" parent="4" name="Invoice"/>
-    <table id="267" parent="4" name="MedicalDisease"/>
-    <table id="268" parent="4" name="MedicalRecord"/>
-    <table id="269" parent="4" name="PatientCosts"/>
-    <table id="270" parent="4" name="Prescription"/>
-    <table id="271" parent="4" name="PrescriptionDetailed"/>
-    <table id="272" parent="4" name="RegistLevel"/>
-    <table id="273" parent="4" name="RegistWork"/>
-    <table id="274" parent="4" name="Register"/>
-    <table id="275" parent="4" name="Rule"/>
-    <table id="276" parent="4" name="Scheduling"/>
-    <table id="277" parent="4" name="SettleCategory"/>
-    <table id="278" parent="4" name="User"/>
-    <column id="279" parent="249" name="ID">
+    <table id="251" parent="4" name="CheckApply"/>
+    <table id="252" parent="4" name="CheckRelation"/>
+    <table id="253" parent="4" name="CheckTemplate"/>
+    <table id="254" parent="4" name="ConstantItem"/>
+    <table id="255" parent="4" name="ConstantType"/>
+    <table id="256" parent="4" name="Department"/>
+    <table id="257" parent="4" name="DiseCategory"/>
+    <table id="258" parent="4" name="Disease"/>
+    <table id="259" parent="4" name="Drugs"/>
+    <table id="260" parent="4" name="DrugsDetailed"/>
+    <table id="261" parent="4" name="DrugsTemplate"/>
+    <table id="262" parent="4" name="ExpenseClass"/>
+    <table id="263" parent="4" name="Fmeditem"/>
+    <table id="264" parent="4" name="HerbalDetailed"/>
+    <table id="265" parent="4" name="HerbalPrescription"/>
+    <table id="266" parent="4" name="HerbalTempDetailed"/>
+    <table id="267" parent="4" name="HerbalTemplate"/>
+    <table id="268" parent="4" name="Invoice"/>
+    <table id="269" parent="4" name="MedicalDisease"/>
+    <table id="270" parent="4" name="MedicalRecord"/>
+    <table id="271" parent="4" name="PatientCosts"/>
+    <table id="272" parent="4" name="Prescription"/>
+    <table id="273" parent="4" name="PrescriptionDetailed"/>
+    <table id="274" parent="4" name="RegistLevel"/>
+    <table id="275" parent="4" name="RegistWork"/>
+    <table id="276" parent="4" name="Register"/>
+    <table id="277" parent="4" name="Rule"/>
+    <table id="278" parent="4" name="Scheduling"/>
+    <table id="279" parent="4" name="SettleCategory"/>
+    <table id="280" parent="4" name="User"/>
+    <column id="281" parent="251" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="280" parent="249" name="MedicalID">
+    <column id="282" parent="251" name="MedicalID">
       <Position>2</Position>
       <Comment>病历ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="281" parent="249" name="RegistID">
+    <column id="283" parent="251" name="RegistID">
       <Position>3</Position>
       <Comment>挂号ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="282" parent="249" name="ItemID">
+    <column id="284" parent="251" name="ItemID">
       <Position>4</Position>
       <Comment>项目ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="283" parent="249" name="Name">
+    <column id="285" parent="251" name="Name">
       <Position>5</Position>
       <Comment>项目名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="284" parent="249" name="Objective">
+    <column id="286" parent="251" name="Objective">
       <Position>6</Position>
       <Comment>目的要求</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="285" parent="249" name="Position">
+    <column id="287" parent="251" name="Position">
       <Position>7</Position>
       <Comment>检查部位</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="286" parent="249" name="IsUrgent">
+    <column id="288" parent="251" name="IsUrgent">
       <Position>8</Position>
       <Comment>是否加急 1为加急 0为不加急</Comment>
       <DataType>int(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="287" parent="249" name="Num">
+    <column id="289" parent="251" name="Num">
       <Position>9</Position>
       <Comment>数量</Comment>
       <DataType>int(3)|0s</DataType>
     </column>
-    <column id="288" parent="249" name="CreationTime">
+    <column id="290" parent="251" name="CreationTime">
       <Position>10</Position>
       <Comment>开立时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="289" parent="249" name="DoctorID">
+    <column id="291" parent="251" name="DoctorID">
       <Position>11</Position>
       <Comment>开立医生ID</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="290" parent="249" name="CheckOperID">
+    <column id="292" parent="251" name="CheckOperID">
       <Position>12</Position>
       <Comment>检查人员ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="291" parent="249" name="ResultOperID">
+    <column id="293" parent="251" name="ResultOperID">
       <Position>13</Position>
       <Comment>结果录入人员ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="292" parent="249" name="CheckTime">
+    <column id="294" parent="251" name="CheckTime">
       <Position>14</Position>
       <Comment>检查时间</Comment>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="293" parent="249" name="Result">
+    <column id="295" parent="251" name="Result">
       <Position>15</Position>
       <Comment>检查结果</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="294" parent="249" name="ResultTime">
+    <column id="296" parent="251" name="ResultTime">
       <Position>16</Position>
       <Comment>结果时间</Comment>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="295" parent="249" name="State">
+    <column id="297" parent="251" name="State">
       <Position>17</Position>
       <Comment>状态</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="296" parent="249" name="RecordType">
+    <column id="298" parent="251" name="RecordType">
       <Position>18</Position>
       <Comment>记录类型 1-检查 2-检验 3-处置</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="297" parent="249" name="PRIMARY">
+    <key id="299" parent="251" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="298" parent="250" name="ID">
+    <column id="300" parent="252" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="299" parent="250" name="CheckProjID">
+    <column id="301" parent="252" name="CheckProjID">
       <Position>2</Position>
       <Comment>项目ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="300" parent="250" name="CheckTempID">
+    <column id="302" parent="252" name="CheckTempID">
       <Position>3</Position>
       <Comment>申请模板ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="301" parent="250" name="Position">
+    <column id="303" parent="252" name="Position">
       <Position>4</Position>
       <Comment>检查部位</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <key id="302" parent="250" name="PRIMARY">
+    <key id="304" parent="252" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="303" parent="251" name="ID">
+    <column id="305" parent="253" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="304" parent="251" name="Name">
+    <column id="306" parent="253" name="Name">
       <Position>2</Position>
       <Comment>名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="305" parent="251" name="UserID">
+    <column id="307" parent="253" name="UserID">
       <Position>3</Position>
       <Comment>医生ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="306" parent="251" name="CreationTime">
+    <column id="308" parent="253" name="CreationTime">
       <Position>4</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="307" parent="251" name="Scope">
+    <column id="309" parent="253" name="Scope">
       <Position>5</Position>
       <Comment>使用范围   全院/科室/个人</Comment>
       <DataType>char(2)|0s</DataType>
     </column>
-    <column id="308" parent="251" name="RecordType">
+    <column id="310" parent="253" name="RecordType">
       <Position>6</Position>
       <Comment>记录类型 1-检查  2-检验 3-处置</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="309" parent="251" name="DelMark">
+    <column id="311" parent="253" name="DelMark">
       <Position>7</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="310" parent="251" name="PRIMARY">
+    <key id="312" parent="253" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="311" parent="252" name="ID">
+    <column id="313" parent="254" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="312" parent="252" name="ConstantTypeID">
+    <column id="314" parent="254" name="ConstantTypeID">
       <Position>2</Position>
       <Comment>所属常数类别ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="313" parent="252" name="ConstantCode">
+    <column id="315" parent="254" name="ConstantCode">
       <Position>3</Position>
       <Comment>常数项编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="314" parent="252" name="ConstantName">
+    <column id="316" parent="254" name="ConstantName">
       <Position>4</Position>
       <Comment>常数项名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="315" parent="252" name="DelMark">
+    <column id="317" parent="254" name="DelMark">
       <Position>5</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="316" parent="252" name="PRIMARY">
+    <key id="318" parent="254" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="317" parent="253" name="ID">
+    <column id="319" parent="255" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="318" parent="253" name="ConstantTypeCode">
+    <column id="320" parent="255" name="ConstantTypeCode">
       <Position>2</Position>
       <Comment>常数类别编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="319" parent="253" name="ConstantTypeName">
+    <column id="321" parent="255" name="ConstantTypeName">
       <Position>3</Position>
       <Comment>常数类别名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="320" parent="253" name="DelMark">
+    <column id="322" parent="255" name="DelMark">
       <Position>4</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="321" parent="253" name="PRIMARY">
+    <key id="323" parent="255" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="322" parent="254" name="ID">
+    <column id="324" parent="256" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="323" parent="254" name="DeptCode">
+    <column id="325" parent="256" name="DeptCode">
       <Position>2</Position>
       <Comment>科室编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="324" parent="254" name="DeptName">
+    <column id="326" parent="256" name="DeptName">
       <Position>3</Position>
       <Comment>科室名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="325" parent="254" name="DeptCategoryID">
+    <column id="327" parent="256" name="DeptCategoryID">
       <Position>4</Position>
       <Comment>科室分类</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="326" parent="254" name="DeptType">
+    <column id="328" parent="256" name="DeptType">
       <Position>5</Position>
       <Comment>科室类型</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <column id="327" parent="254" name="DelMark">
+    <column id="329" parent="256" name="DelMark">
       <Position>6</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="328" parent="254" name="PRIMARY">
+    <key id="330" parent="256" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="329" parent="255" name="ID">
+    <column id="331" parent="257" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="330" parent="255" name="DicaCode">
+    <column id="332" parent="257" name="DicaCode">
       <Position>2</Position>
       <Comment>分类编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="331" parent="255" name="DicaName">
+    <column id="333" parent="257" name="DicaName">
       <Position>3</Position>
       <Comment>分类名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="332" parent="255" name="SequenceNo">
+    <column id="334" parent="257" name="SequenceNo">
       <Position>4</Position>
       <Comment>显示顺序号</Comment>
       <DataType>int(3)|0s</DataType>
     </column>
-    <column id="333" parent="255" name="DicaType">
+    <column id="335" parent="257" name="DicaType">
       <Position>5</Position>
       <Comment>疾病类型</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="334" parent="255" name="DelMark">
+    <column id="336" parent="257" name="DelMark">
       <Position>6</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="335" parent="255" name="PRIMARY">
+    <key id="337" parent="257" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="336" parent="256" name="ID">
+    <column id="338" parent="258" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="337" parent="256" name="DiseaseCode">
+    <column id="339" parent="258" name="DiseaseCode">
       <Position>2</Position>
       <Comment>疾病助记编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="338" parent="256" name="DiseaseName">
+    <column id="340" parent="258" name="DiseaseName">
       <Position>3</Position>
       <Comment>疾病名称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="339" parent="256" name="DiseaseICD">
+    <column id="341" parent="258" name="DiseaseICD">
       <Position>4</Position>
       <Comment>国际ICD编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="340" parent="256" name="DiseCategoryID">
+    <column id="342" parent="258" name="DiseCategoryID">
       <Position>5</Position>
       <Comment>疾病所属分类</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="341" parent="256" name="DelMark">
+    <column id="343" parent="258" name="DelMark">
       <Position>6</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="342" parent="256" name="PRIMARY">
+    <key id="344" parent="258" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="343" parent="257" name="ID">
+    <column id="345" parent="259" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="344" parent="257" name="DrugsCode">
+    <column id="346" parent="259" name="DrugsCode">
       <Position>2</Position>
       <Comment>药品编码</Comment>
       <DataType>char(14)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="345" parent="257" name="DrugsName">
+    <column id="347" parent="259" name="DrugsName">
       <Position>3</Position>
       <Comment>药品名称</Comment>
       <DataType>varchar(512)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="346" parent="257" name="DrugsFormat">
+    <column id="348" parent="259" name="DrugsFormat">
       <Position>4</Position>
       <Comment>药品规格</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="347" parent="257" name="DrugsUnit">
+    <column id="349" parent="259" name="DrugsUnit">
       <Position>5</Position>
       <Comment>包装单位</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="348" parent="257" name="Manufacturer">
+    <column id="350" parent="259" name="Manufacturer">
       <Position>6</Position>
       <Comment>生产厂家</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="349" parent="257" name="DrugsDosageID">
+    <column id="351" parent="259" name="DrugsDosageID">
       <Position>7</Position>
       <Comment>药品剂型</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="350" parent="257" name="DrugsTypeID">
+    <column id="352" parent="259" name="DrugsTypeID">
       <Position>8</Position>
       <Comment>药品类型</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="351" parent="257" name="DrugsPrice">
+    <column id="353" parent="259" name="DrugsPrice">
       <Position>9</Position>
       <Comment>药品单价</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="352" parent="257" name="MnemonicCode">
+    <column id="354" parent="259" name="MnemonicCode">
       <Position>10</Position>
       <Comment>拼音助记码</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="353" parent="257" name="CreationDate">
+    <column id="355" parent="259" name="CreationDate">
       <Position>11</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="354" parent="257" name="LastUpdateDate">
+    <column id="356" parent="259" name="LastUpdateDate">
       <Position>12</Position>
       <Comment>最后修改时间</Comment>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="355" parent="257" name="DelMark">
+    <column id="357" parent="259" name="DelMark">
       <Position>13</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="356" parent="257" name="PRIMARY">
+    <key id="358" parent="259" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="357" parent="258" name="ID">
+    <column id="359" parent="260" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="358" parent="258" name="DrugsTempID">
+    <column id="360" parent="260" name="DrugsTempID">
       <Position>2</Position>
       <Comment>成药模板ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="359" parent="258" name="DrugsID">
+    <column id="361" parent="260" name="DrugsID">
       <Position>3</Position>
       <Comment>药品ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="360" parent="258" name="DrugsUsage">
+    <column id="362" parent="260" name="DrugsUsage">
       <Position>4</Position>
       <Comment>用法</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="361" parent="258" name="Dosage">
+    <column id="363" parent="260" name="Dosage">
       <Position>5</Position>
       <Comment>用量</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="362" parent="258" name="Frequency">
+    <column id="364" parent="260" name="Frequency">
       <Position>6</Position>
       <Comment>频次</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <key id="363" parent="258" name="PRIMARY">
+    <key id="365" parent="260" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="364" parent="259" name="ID">
+    <column id="366" parent="261" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="365" parent="259" name="Name">
+    <column id="367" parent="261" name="Name">
       <Position>2</Position>
       <Comment>名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="366" parent="259" name="UserID">
+    <column id="368" parent="261" name="UserID">
       <Position>3</Position>
       <Comment>医生ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="367" parent="259" name="CreationTime">
+    <column id="369" parent="261" name="CreationTime">
       <Position>4</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="368" parent="259" name="Scope">
+    <column id="370" parent="261" name="Scope">
       <Position>5</Position>
       <Comment>使用范围   全院/科室/个人</Comment>
       <DataType>char(2)|0s</DataType>
     </column>
-    <column id="369" parent="259" name="DelMark">
+    <column id="371" parent="261" name="DelMark">
       <Position>6</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="370" parent="259" name="PRIMARY">
+    <key id="372" parent="261" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="371" parent="260" name="ID">
+    <column id="373" parent="262" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="372" parent="260" name="ExpCode">
+    <column id="374" parent="262" name="ExpCode">
       <Position>2</Position>
       <Comment>费用科目编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="373" parent="260" name="ExpName">
+    <column id="375" parent="262" name="ExpName">
       <Position>3</Position>
       <Comment>费用科目名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="374" parent="260" name="DelMark">
+    <column id="376" parent="262" name="DelMark">
       <Position>4</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="375" parent="260" name="PRIMARY">
+    <key id="377" parent="262" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="376" parent="261" name="ID">
+    <column id="378" parent="263" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="377" parent="261" name="ItemCode">
+    <column id="379" parent="263" name="ItemCode">
       <Position>2</Position>
       <Comment>项目编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="378" parent="261" name="ItemName">
+    <column id="380" parent="263" name="ItemName">
       <Position>3</Position>
       <Comment>项目名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="379" parent="261" name="Format">
+    <column id="381" parent="263" name="Format">
       <Position>4</Position>
       <Comment>规格</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="380" parent="261" name="Price">
+    <column id="382" parent="263" name="Price">
       <Position>5</Position>
       <Comment>单价</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="381" parent="261" name="ExpClassID">
+    <column id="383" parent="263" name="ExpClassID">
       <Position>6</Position>
       <Comment>所属费用科目ID</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="382" parent="261" name="DeptID">
+    <column id="384" parent="263" name="DeptID">
       <Position>7</Position>
       <Comment>执行科室ID</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="383" parent="261" name="MnemonicCode">
+    <column id="385" parent="263" name="MnemonicCode">
       <Position>8</Position>
       <Comment>拼音助记码</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="384" parent="261" name="CreationDate">
+    <column id="386" parent="263" name="CreationDate">
       <Position>9</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="385" parent="261" name="LastUpdateDate">
+    <column id="387" parent="263" name="LastUpdateDate">
       <Position>10</Position>
       <Comment>最后修改时间</Comment>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="386" parent="261" name="RecordType">
+    <column id="388" parent="263" name="RecordType">
       <Position>11</Position>
       <Comment>项目类型</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <column id="387" parent="261" name="DelMark">
+    <column id="389" parent="263" name="DelMark">
       <Position>12</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="388" parent="261" name="PRIMARY">
+    <key id="390" parent="263" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="389" parent="262" name="ID">
+    <column id="391" parent="264" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="390" parent="262" name="HerbalPresID">
+    <column id="392" parent="264" name="HerbalPresID">
       <Position>2</Position>
       <Comment>草药处方ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="391" parent="262" name="HerbalID">
+    <column id="393" parent="264" name="HerbalID">
       <Position>3</Position>
       <Comment>药品ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="392" parent="262" name="Dosage">
+    <column id="394" parent="264" name="Dosage">
       <Position>4</Position>
       <Comment>用量</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="393" parent="262" name="Price">
+    <column id="395" parent="264" name="Price">
       <Position>5</Position>
       <Comment>药品单价</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="394" parent="262" name="Footnote">
+    <column id="396" parent="264" name="Footnote">
       <Position>6</Position>
       <Comment>脚注</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <key id="395" parent="262" name="PRIMARY">
+    <key id="397" parent="264" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="396" parent="263" name="ID">
+    <column id="398" parent="265" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="397" parent="263" name="MedicalID">
+    <column id="399" parent="265" name="MedicalID">
       <Position>2</Position>
       <Comment>病历ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="398" parent="263" name="RegistID">
+    <column id="400" parent="265" name="RegistID">
       <Position>3</Position>
       <Comment>挂号ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="399" parent="263" name="UserID">
+    <column id="401" parent="265" name="UserID">
       <Position>4</Position>
       <Comment>开立医生ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="400" parent="263" name="PrescriptionName">
+    <column id="402" parent="265" name="PrescriptionName">
       <Position>5</Position>
       <Comment>处方名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="401" parent="263" name="CreationTime">
+    <column id="403" parent="265" name="CreationTime">
       <Position>6</Position>
       <Comment>开立时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="402" parent="263" name="PrescriptioType">
+    <column id="404" parent="265" name="PrescriptioType">
       <Position>7</Position>
       <Comment>处方类型 水煎煮/酒泡/打粉/制丸/装胶囊等</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="403" parent="263" name="PayNumber">
+    <column id="405" parent="265" name="PayNumber">
       <Position>8</Position>
       <Comment>付数</Comment>
       <DataType>int(3)|0s</DataType>
     </column>
-    <column id="404" parent="263" name="Frequency">
+    <column id="406" parent="265" name="Frequency">
       <Position>9</Position>
       <Comment>频次</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="405" parent="263" name="DrugsUsage">
+    <column id="407" parent="265" name="DrugsUsage">
       <Position>10</Position>
       <Comment>用法 内服/外用</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="406" parent="263" name="Therapy">
+    <column id="408" parent="265" name="Therapy">
       <Position>11</Position>
       <Comment>治法</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="407" parent="263" name="Detailed">
+    <column id="409" parent="265" name="Detailed">
       <Position>12</Position>
       <Comment>治法详细</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="408" parent="263" name="Advice">
+    <column id="410" parent="265" name="Advice">
       <Position>13</Position>
       <Comment>医嘱</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="409" parent="263" name="State">
+    <column id="411" parent="265" name="State">
       <Position>14</Position>
       <Comment>状态</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <key id="410" parent="263" name="PRIMARY">
+    <key id="412" parent="265" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="411" parent="264" name="ID">
+    <column id="413" parent="266" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="412" parent="264" name="HerbalTempID">
+    <column id="414" parent="266" name="HerbalTempID">
       <Position>2</Position>
       <Comment>草药模板ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="413" parent="264" name="HerbalID">
+    <column id="415" parent="266" name="HerbalID">
       <Position>3</Position>
       <Comment>药品ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="414" parent="264" name="Dosage">
+    <column id="416" parent="266" name="Dosage">
       <Position>4</Position>
       <Comment>用量</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="415" parent="264" name="Unit">
+    <column id="417" parent="266" name="Unit">
       <Position>5</Position>
       <Comment>药品单位</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="416" parent="264" name="Footnote">
+    <column id="418" parent="266" name="Footnote">
       <Position>6</Position>
       <Comment>脚注</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <key id="417" parent="264" name="PRIMARY">
+    <key id="419" parent="266" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="418" parent="265" name="ID">
+    <column id="420" parent="267" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="419" parent="265" name="Name">
+    <column id="421" parent="267" name="Name">
       <Position>2</Position>
       <Comment>名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="420" parent="265" name="DoctorID">
+    <column id="422" parent="267" name="DoctorID">
       <Position>3</Position>
       <Comment>医生ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="421" parent="265" name="CreationTime">
+    <column id="423" parent="267" name="CreationTime">
       <Position>4</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="422" parent="265" name="PrescriptioType">
+    <column id="424" parent="267" name="PrescriptioType">
       <Position>5</Position>
       <Comment>处方类型 水煎煮/酒泡/打粉/制丸/装胶囊等</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="423" parent="265" name="PayNumber">
+    <column id="425" parent="267" name="PayNumber">
       <Position>6</Position>
       <Comment>付数</Comment>
       <DataType>int(3)|0s</DataType>
     </column>
-    <column id="424" parent="265" name="DrugsUsage">
+    <column id="426" parent="267" name="DrugsUsage">
       <Position>7</Position>
       <Comment>用法</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="425" parent="265" name="Therapy">
+    <column id="427" parent="267" name="Therapy">
       <Position>8</Position>
       <Comment>治法</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="426" parent="265" name="Detailed">
+    <column id="428" parent="267" name="Detailed">
       <Position>9</Position>
       <Comment>治法详细</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="427" parent="265" name="Advice">
+    <column id="429" parent="267" name="Advice">
       <Position>10</Position>
       <Comment>医嘱</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="428" parent="265" name="Scope">
+    <column id="430" parent="267" name="Scope">
       <Position>11</Position>
       <Comment>使用范围 全院/科室/个人</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="429" parent="265" name="DelMark">
+    <column id="431" parent="267" name="DelMark">
       <Position>12</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="430" parent="265" name="PRIMARY">
+    <key id="432" parent="267" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="431" parent="266" name="ID">
+    <column id="433" parent="268" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="432" parent="266" name="InvoiceNum">
+    <column id="434" parent="268" name="InvoiceNum">
       <Position>2</Position>
       <Comment>发票号码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="433" parent="266" name="Money">
+    <column id="435" parent="268" name="Money">
       <Position>3</Position>
       <Comment>发票金额</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="434" parent="266" name="State">
+    <column id="436" parent="268" name="State">
       <Position>4</Position>
       <Comment>发票状态  1-正常  2-作废 </Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="435" parent="266" name="CreationTime">
+    <column id="437" parent="268" name="CreationTime">
       <Position>5</Position>
       <Comment>收/退费时间 </Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="436" parent="266" name="UserID">
+    <column id="438" parent="268" name="UserID">
       <Position>6</Position>
       <Comment>收/退费人员ID </Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="437" parent="266" name="RegistID">
+    <column id="439" parent="268" name="RegistID">
       <Position>7</Position>
       <Comment>挂号ID </Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="438" parent="266" name="FeeType">
+    <column id="440" parent="268" name="FeeType">
       <Position>8</Position>
       <Comment>收费方式 </Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="439" parent="266" name="Back">
+    <column id="441" parent="268" name="Back">
       <Position>9</Position>
       <Comment>冲红发票号码</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="440" parent="266" name="DailyState">
+    <column id="442" parent="268" name="DailyState">
       <Position>10</Position>
       <Comment>发票状态  0-未日结  1-已提交  2-已审核 </Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <key id="441" parent="266" name="PRIMARY">
+    <key id="443" parent="268" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="442" parent="267" name="ID">
+    <column id="444" parent="269" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="443" parent="267" name="MedicalID">
+    <column id="445" parent="269" name="MedicalID">
       <Position>2</Position>
       <Comment>病历ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="444" parent="267" name="RegistID">
+    <column id="446" parent="269" name="RegistID">
       <Position>3</Position>
       <Comment>挂号ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="445" parent="267" name="DiseaseID">
+    <column id="447" parent="269" name="DiseaseID">
       <Position>4</Position>
       <Comment>疾病ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="446" parent="267" name="DiagnoseType">
+    <column id="448" parent="269" name="DiagnoseType">
       <Position>5</Position>
       <Comment>诊断类型 1-西医 2-中医</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <column id="447" parent="267" name="GetSiskDate">
+    <column id="449" parent="269" name="GetSiskDate">
       <Position>6</Position>
       <Comment>发病日期</Comment>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="448" parent="267" name="DiagnoseCate">
+    <column id="450" parent="269" name="DiagnoseCate">
       <Position>7</Position>
       <Comment>诊断种类 1-初诊 2-终诊</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <key id="449" parent="267" name="PRIMARY">
+    <key id="451" parent="269" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="450" parent="268" name="ID">
+    <column id="452" parent="270" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="451" parent="268" name="CaseNumber">
+    <column id="453" parent="270" name="CaseNumber">
       <Position>2</Position>
       <Comment>病历号</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="452" parent="268" name="RegistID">
+    <column id="454" parent="270" name="RegistID">
       <Position>3</Position>
       <Comment>挂号ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="453" parent="268" name="Readme">
+    <column id="455" parent="270" name="Readme">
       <Position>4</Position>
       <Comment>主诉</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="454" parent="268" name="Present">
+    <column id="456" parent="270" name="Present">
       <Position>5</Position>
       <Comment>现病史</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="455" parent="268" name="PresentTreat">
+    <column id="457" parent="270" name="PresentTreat">
       <Position>6</Position>
       <Comment>现病治疗情况</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="456" parent="268" name="History">
+    <column id="458" parent="270" name="History">
       <Position>7</Position>
       <Comment>既往史</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="457" parent="268" name="Allergy">
+    <column id="459" parent="270" name="Allergy">
       <Position>8</Position>
       <Comment>过敏史</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="458" parent="268" name="Physique">
+    <column id="460" parent="270" name="Physique">
       <Position>9</Position>
       <Comment>体格检查</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="459" parent="268" name="Proposal">
+    <column id="461" parent="270" name="Proposal">
       <Position>10</Position>
       <Comment>检查建议</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="460" parent="268" name="Careful">
+    <column id="462" parent="270" name="Careful">
       <Position>11</Position>
       <Comment>注意事项</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="461" parent="268" name="CheckResult">
+    <column id="463" parent="270" name="CheckResult">
       <Position>12</Position>
       <Comment>检查结果</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="462" parent="268" name="Diagnosis">
+    <column id="464" parent="270" name="Diagnosis">
       <Position>13</Position>
       <Comment>诊断结果</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="463" parent="268" name="Handling">
+    <column id="465" parent="270" name="Handling">
       <Position>14</Position>
       <Comment>处理意见</Comment>
       <DataType>varchar(512)|0s</DataType>
     </column>
-    <column id="464" parent="268" name="CaseState">
+    <column id="466" parent="270" name="CaseState">
       <Position>15</Position>
       <Comment>病历状态 1-暂存 2-已提交 3-诊毕</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <key id="465" parent="268" name="PRIMARY">
+    <key id="467" parent="270" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="466" parent="269" name="ID">
+    <column id="468" parent="271" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="467" parent="269" name="RegistID">
+    <column id="469" parent="271" name="RegistID">
       <Position>2</Position>
       <Comment>挂号ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="468" parent="269" name="InvoiceID">
+    <column id="470" parent="271" name="InvoiceID">
       <Position>3</Position>
       <Comment>发票ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="469" parent="269" name="ItemID">
+    <column id="471" parent="271" name="ItemID">
       <Position>4</Position>
       <Comment>项目ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="470" parent="269" name="ItemType">
+    <column id="472" parent="271" name="ItemType">
       <Position>5</Position>
       <Comment>项目类型 1-非药品 2-药品</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="471" parent="269" name="Name">
+    <column id="473" parent="271" name="Name">
       <Position>6</Position>
       <Comment>项目名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="472" parent="269" name="Price">
+    <column id="474" parent="271" name="Price">
       <Position>7</Position>
       <Comment>项目单价</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="473" parent="269" name="Amount">
+    <column id="475" parent="271" name="Amount">
       <Position>8</Position>
       <Comment>数量</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="474" parent="269" name="DeptID">
+    <column id="476" parent="271" name="DeptID">
       <Position>9</Position>
       <Comment>执行科室ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="475" parent="269" name="Createtime">
+    <column id="477" parent="271" name="Createtime">
       <Position>10</Position>
       <Comment>开立时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="476" parent="269" name="CreateOperID">
+    <column id="478" parent="271" name="CreateOperID">
       <Position>11</Position>
       <Comment>开立人员ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="477" parent="269" name="PayTime">
+    <column id="479" parent="271" name="PayTime">
       <Position>12</Position>
       <Comment>收/退费时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="478" parent="269" name="RegisterID">
+    <column id="480" parent="271" name="RegisterID">
       <Position>13</Position>
       <Comment>收/退费人员ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="479" parent="269" name="FeeType">
+    <column id="481" parent="271" name="FeeType">
       <Position>14</Position>
       <Comment>收费方式</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="480" parent="269" name="BackID">
+    <column id="482" parent="271" name="BackID">
       <Position>15</Position>
       <Comment>退费对应记录ID</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <key id="481" parent="269" name="PRIMARY">
+    <key id="483" parent="271" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="482" parent="270" name="ID">
+    <column id="484" parent="272" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="483" parent="270" name="MedicalID">
+    <column id="485" parent="272" name="MedicalID">
       <Position>2</Position>
       <Comment>病历ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="484" parent="270" name="RegistID">
+    <column id="486" parent="272" name="RegistID">
       <Position>3</Position>
       <Comment>挂号ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="485" parent="270" name="UserID">
+    <column id="487" parent="272" name="UserID">
       <Position>4</Position>
       <Comment>开立医生ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="486" parent="270" name="PrescriptionName">
+    <column id="488" parent="272" name="PrescriptionName">
       <Position>5</Position>
       <Comment>处方名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="487" parent="270" name="PrescriptionTime">
+    <column id="489" parent="272" name="PrescriptionTime">
       <Position>6</Position>
       <Comment>开立时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="488" parent="270" name="PrescriptionState">
+    <column id="490" parent="272" name="PrescriptionState">
       <Position>7</Position>
       <Comment>处方状态</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="489" parent="270" name="PRIMARY">
+    <key id="491" parent="272" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="490" parent="271" name="ID">
+    <column id="492" parent="273" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="491" parent="271" name="PrescriptionID">
+    <column id="493" parent="273" name="PrescriptionID">
       <Position>2</Position>
       <Comment>成药处方ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="492" parent="271" name="DrugsID">
+    <column id="494" parent="273" name="DrugsID">
       <Position>3</Position>
       <Comment>药品ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="493" parent="271" name="DrugsUsage">
+    <column id="495" parent="273" name="DrugsUsage">
       <Position>4</Position>
       <Comment>用法</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="494" parent="271" name="Dosage">
+    <column id="496" parent="273" name="Dosage">
       <Position>5</Position>
       <Comment>用量</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="495" parent="271" name="Frequency">
+    <column id="497" parent="273" name="Frequency">
       <Position>6</Position>
       <Comment>频次</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="496" parent="271" name="Amount">
+    <column id="498" parent="273" name="Amount">
       <Position>7</Position>
       <Comment>数量</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="497" parent="271" name="State">
+    <column id="499" parent="273" name="State">
       <Position>8</Position>
       <Comment>状态</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>2</DefaultExpression>
     </column>
-    <key id="498" parent="271" name="PRIMARY">
+    <key id="500" parent="273" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="499" parent="272" name="ID">
+    <column id="501" parent="274" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="500" parent="272" name="RegistCode">
+    <column id="502" parent="274" name="RegistCode">
       <Position>2</Position>
       <Comment>号别编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="501" parent="272" name="RegistName">
+    <column id="503" parent="274" name="RegistName">
       <Position>3</Position>
       <Comment>号别名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="502" parent="272" name="SequenceNo">
+    <column id="504" parent="274" name="SequenceNo">
       <Position>4</Position>
       <Comment>显示顺序号</Comment>
       <DataType>int(3)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="503" parent="272" name="RegistFee">
+    <column id="505" parent="274" name="RegistFee">
       <Position>5</Position>
       <Comment>挂号费</Comment>
       <DataType>decimal(8,2 digit)|0s</DataType>
     </column>
-    <column id="504" parent="272" name="RegistQuota">
+    <column id="506" parent="274" name="RegistQuota">
       <Position>6</Position>
       <Comment>挂号限额</Comment>
       <DataType>int(3)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="505" parent="272" name="DelMark">
+    <column id="507" parent="274" name="DelMark">
       <Position>7</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="506" parent="272" name="PRIMARY">
+    <key id="508" parent="274" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="507" parent="273" name="ID">
+    <column id="509" parent="275" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="508" parent="273" name="RegisterID">
+    <column id="510" parent="275" name="RegisterID">
       <Position>2</Position>
       <Comment>收费人员ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="509" parent="273" name="StartTime">
+    <column id="511" parent="275" name="StartTime">
       <Position>3</Position>
       <Comment>日结起始时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="510" parent="273" name="EndTime">
+    <column id="512" parent="275" name="EndTime">
       <Position>4</Position>
       <Comment>日结结束时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="511" parent="273" name="PRIMARY">
+    <key id="513" parent="275" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="512" parent="274" name="ID">
+    <column id="514" parent="276" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="513" parent="274" name="CaseNumber">
+    <column id="515" parent="276" name="CaseNumber">
       <Position>2</Position>
       <Comment>病历号</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="514" parent="274" name="RealName">
+    <column id="516" parent="276" name="RealName">
       <Position>3</Position>
       <Comment>姓名</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="515" parent="274" name="Gender">
+    <column id="517" parent="276" name="Gender">
       <Position>4</Position>
       <Comment>性别</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="516" parent="274" name="IDnumber">
+    <column id="518" parent="276" name="IDnumber">
       <Position>5</Position>
       <Comment>身份证号</Comment>
       <DataType>varchar(18)|0s</DataType>
     </column>
-    <column id="517" parent="274" name="BirthDate">
+    <column id="519" parent="276" name="BirthDate">
       <Position>6</Position>
       <Comment>出生日期</Comment>
       <DataType>date|0s</DataType>
     </column>
-    <column id="518" parent="274" name="Age">
+    <column id="520" parent="276" name="Age">
       <Position>7</Position>
       <Comment>年龄</Comment>
       <DataType>int(3)|0s</DataType>
     </column>
-    <column id="519" parent="274" name="AgeType">
+    <column id="521" parent="276" name="AgeType">
       <Position>8</Position>
       <Comment>年龄类型 岁 月 天</Comment>
       <DataType>char(1)|0s</DataType>
     </column>
-    <column id="520" parent="274" name="HomeAddress">
+    <column id="522" parent="276" name="HomeAddress">
       <Position>9</Position>
       <Comment>家庭住址</Comment>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="521" parent="274" name="VisitDate">
+    <column id="523" parent="276" name="VisitDate">
       <Position>10</Position>
       <Comment>本次看诊日期</Comment>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="522" parent="274" name="Noon">
+    <column id="524" parent="276" name="Noon">
       <Position>11</Position>
       <Comment>午别  上午/下午</Comment>
       <DataType>char(2)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="523" parent="274" name="DeptID">
+    <column id="525" parent="276" name="DeptID">
       <Position>12</Position>
       <Comment>本次挂号科室ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="524" parent="274" name="UserID">
+    <column id="526" parent="276" name="UserID">
       <Position>13</Position>
       <Comment>本次挂号医生ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="525" parent="274" name="RegistLeID">
+    <column id="527" parent="276" name="RegistLeID">
       <Position>14</Position>
       <Comment>本次挂号级别ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="526" parent="274" name="SettleID">
+    <column id="528" parent="276" name="SettleID">
       <Position>15</Position>
       <Comment>结算类别ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="527" parent="274" name="IsBook">
+    <column id="529" parent="276" name="IsBook">
       <Position>16</Position>
       <Comment>病历本要否  是/否</Comment>
       <DataType>char(1)|0s</DataType>
     </column>
-    <column id="528" parent="274" name="RegistTime">
+    <column id="530" parent="276" name="RegistTime">
       <Position>17</Position>
       <Comment>挂号时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="529" parent="274" name="RegisterID">
+    <column id="531" parent="276" name="RegisterID">
       <Position>18</Position>
       <Comment>挂号员ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="530" parent="274" name="VisitState">
+    <column id="532" parent="276" name="VisitState">
       <Position>19</Position>
       <Comment>本次看诊状态</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <key id="531" parent="274" name="PRIMARY">
+    <key id="533" parent="276" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="532" parent="275" name="ID">
+    <column id="534" parent="277" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="533" parent="275" name="RuleName">
+    <column id="535" parent="277" name="RuleName">
       <Position>2</Position>
       <Comment>规则名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="534" parent="275" name="DeptID">
+    <column id="536" parent="277" name="DeptID">
       <Position>3</Position>
       <Comment>科室ID</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="535" parent="275" name="UserID">
+    <column id="537" parent="277" name="UserID">
       <Position>4</Position>
       <Comment>医生ID</Comment>
       <DataType>int(9)|0s</DataType>
     </column>
-    <column id="536" parent="275" name="Week">
+    <column id="538" parent="277" name="Week">
       <Position>5</Position>
       <Comment>星期</Comment>
       <DataType>varchar(14)|0s</DataType>
     </column>
-    <column id="537" parent="275" name="DelMark">
+    <column id="539" parent="277" name="DelMark">
       <Position>6</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="538" parent="275" name="PRIMARY">
+    <key id="540" parent="277" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="539" parent="276" name="ID">
+    <column id="541" parent="278" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="540" parent="276" name="SchedDate">
+    <column id="542" parent="278" name="SchedDate">
       <Position>2</Position>
       <Comment>排班日期</Comment>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="541" parent="276" name="DeptID">
+    <column id="543" parent="278" name="DeptID">
       <Position>3</Position>
       <Comment>科室ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="542" parent="276" name="UserID">
+    <column id="544" parent="278" name="UserID">
       <Position>4</Position>
       <Comment>医生ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="543" parent="276" name="Noon">
+    <column id="545" parent="278" name="Noon">
       <Position>5</Position>
       <Comment>午别</Comment>
       <DataType>char(2)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="544" parent="276" name="RuleID">
+    <column id="546" parent="278" name="RuleID">
       <Position>6</Position>
       <Comment>排班规则ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="545" parent="276" name="DelMark">
+    <column id="547" parent="278" name="DelMark">
       <Position>7</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="546" parent="276" name="PRIMARY">
+    <key id="548" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="547" parent="277" name="ID">
+    <column id="549" parent="279" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="548" parent="277" name="SettleCode">
+    <column id="550" parent="279" name="SettleCode">
       <Position>2</Position>
       <Comment>类别编码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="549" parent="277" name="SettleName">
+    <column id="551" parent="279" name="SettleName">
       <Position>3</Position>
       <Comment>类别名称</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="550" parent="277" name="SequenceNo">
+    <column id="552" parent="279" name="SequenceNo">
       <Position>4</Position>
       <Comment>显示顺序号</Comment>
       <DataType>int(3)|0s</DataType>
     </column>
-    <column id="551" parent="277" name="DelMark">
+    <column id="553" parent="279" name="DelMark">
       <Position>5</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="552" parent="277" name="PRIMARY">
+    <key id="554" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="553" parent="278" name="ID">
+    <column id="555" parent="280" name="ID">
       <Position>1</Position>
       <Comment>ID主键</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="554" parent="278" name="UserName">
+    <column id="556" parent="280" name="UserName">
       <Position>2</Position>
       <Comment>登录名</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="555" parent="278" name="Password">
+    <column id="557" parent="280" name="Password">
       <Position>3</Position>
       <Comment>密码</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="556" parent="278" name="RealName">
+    <column id="558" parent="280" name="RealName">
       <Position>4</Position>
       <Comment>真实姓名</Comment>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="557" parent="278" name="UseType">
+    <column id="559" parent="280" name="UseType">
       <Position>5</Position>
       <Comment>用户类别</Comment>
       <DataType>int(1)|0s</DataType>
     </column>
-    <column id="558" parent="278" name="DocTitleID">
+    <column id="560" parent="280" name="DocTitleID">
       <Position>6</Position>
       <Comment>医生职称ID</Comment>
       <DataType>int(9)|0s</DataType>
       <DefaultExpression>84</DefaultExpression>
     </column>
-    <column id="559" parent="278" name="IsScheduling">
+    <column id="561" parent="280" name="IsScheduling">
       <Position>7</Position>
       <Comment>是否参与排班</Comment>
       <DataType>char(1)|0s</DataType>
       <DefaultExpression>&apos;否&apos;</DefaultExpression>
     </column>
-    <column id="560" parent="278" name="DeptID">
+    <column id="562" parent="280" name="DeptID">
       <Position>8</Position>
       <Comment>所在科室ID</Comment>
       <DataType>int(9)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="561" parent="278" name="RegistLeID">
+    <column id="563" parent="280" name="RegistLeID">
       <Position>9</Position>
       <Comment>挂号级别ID</Comment>
       <DataType>int(9)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="562" parent="278" name="DelMark">
+    <column id="564" parent="280" name="DelMark">
       <Position>10</Position>
       <Comment>删除标记</Comment>
       <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <key id="563" parent="278" name="PRIMARY">
+    <key id="565" parent="280" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
