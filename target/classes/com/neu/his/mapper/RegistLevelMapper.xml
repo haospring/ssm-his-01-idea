@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.mapper.RegistLevelMapper">
+    <!--根据条件完成挂号记录查询-->
+    <select id="getRegistLevelList" resultType="map">
+        select * from RegistLevel
+        <where>
+            <if test="keywords!=null and keywords!=''">
+                RegistCode like concat('%',#{keywords},'%')
+            </if>
+            <if test="keywords!=null and keywords!=''">
+                or RegistName like concat('%',#{keywords},'%')
+            </if>
+        </where>
+        order by SequenceNo limit #{page},#{count}
+    </select>
+
+    <!--查询记录行数-->
+    <select id="getRegistLevelCount" resultType="_int">
+        select count(*) from RegistLevel
+        <where>
+            <if test="keywords!=null and keywords!=''">
+                RegistCode like concat('%',#{keywords},'%')
+            </if>
+            <if test="keywords!=null and keywords!=''">
+                or RegistName like concat('%',#{keywords},'%')
+            </if>
+        </where>
+    </select>
+
+    <!--删除挂号信息-->
+    <delete id="deleteRegistLevel">
+        delete from RegistLevel where ID in
+        <foreach collection="ids" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--删除：更新DelMark字段，保留原数据-->
+    <update id="deleteRegistLevel02">
+        update RegistLevel set DelMark = 0 where ID in
+        <foreach collection="ids" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </update>
+
+    <!--更新挂号数据-->
+    <update id="updateRegistLevel" parameterType="map">
+        update RegistLevel
+        set RegistCode=#{RegistCode},
+            RegistName=#{RegistName},
+            SequenceNo=#{SequenceNo},
+            RegistFee=#{RegistFee},
+            RegistQuota=#{RegistQuota}
+        where ID = #{ID}
+    </update>
+
+    <!--添加挂号数据-->
+    <insert id="addRegistLevel" parameterType="map">
+        insert into RegistLevel
+        set RegistCode=#{RegistCode},
+            RegistName=#{RegistName},
+            SequenceNo=#{SequenceNo},
+            RegistFee=#{RegistFee},
+            RegistQuota=#{RegistQuota}
+    </insert>
+</mapper>
