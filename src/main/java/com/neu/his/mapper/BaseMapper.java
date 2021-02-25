@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.Param;
 public interface BaseMapper {
 	/**
 	 * 根据ID主键完成数据查询
-	 * @param int id 主键
+	 * @param id 主键
 	 * @return List<Map<String,Object>>
 	 */
 	List<Map<String, Object>> selectByPrimaryKey(@Param("id") int id);

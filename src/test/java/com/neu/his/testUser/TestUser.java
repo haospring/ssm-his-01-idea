@@ -73,4 +73,12 @@ public class TestUser {
 		User userBean = userService.getUserBean("bianque", "bianque123");
 		System.out.println(userBean);
 	}
+
+	@Test
+	public void testMath(){
+		System.out.println(Math.round(11.5));
+		System.out.println(Math.round(-11.5));
+		System.out.println(Math.round(-11.4));
+		System.out.println(100%3.0);
+	}
 }

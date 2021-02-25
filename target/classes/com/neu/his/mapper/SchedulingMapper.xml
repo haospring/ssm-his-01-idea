@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.mapper.SchedulingMapper">
+    <!--根据时间段查询时间信息-->
+    <select id="getSchedulingList" resultType="map">
+        select a.SchedDate, c.DeptName, b.RealName, a.Noon, d.Registname, d.RegistQuota, a.id
+        from Scheduling a,
+        User b,
+        Department c,
+        RegistLevel d
+        where a.UserID = b.ID
+        and a.DeptID = c.ID
+        and b.RegistLeID = d.ID
+        and b.IsScheduling = '是'
+        <if test="keywords!=null and keywords!=''">
+            and (SchedDate &gt;=#{keywords})
+        </if>
+        <if test="keywords2!=null and keywords2!=''">
+            and (SchedDate &lt;=#{keywords2})
+        </if>
+        order by SchedDate desc limit #{startPage},#{count}
+    </select>
+
+    <!--查询信息的最大行数-->
+    <select id="getSchedulingCount" resultType="_int">
+        select count(*) from Scheduling
+        <where>
+            <if test="keywords!=null and keywords!=''">
+                and SchedDate &gt;=#{keywords}
+            </if>
+            <if test="keywords2!=null and keywords2!=''">
+                and SchedDate &gt;=#{keywords}
+            </if>
+        </where>
+    </select>
+
+    <!--获取排班医生的挂号额度-->
+    <select id="getSchedulingCount06" resultType="_int">
+        select a.ID,a.SchedDate,a.Noon
+        from Scheduling a,
+        User b,
+        RegistLevel c
+        <where>
+            a.UserID = b.ID
+            and b.RegistLeID = c.ID
+            and b.IsScheduling = '是'
+            <if test="keywords!=null and keywords!=''">
+                and a.SchedDate = #{keywords}
+            </if>
+            <if test="keywords2!=null and keywords2!=''">
+                and a.Noon = #{keywords2}
+            </if>
+            <if test="keywords3!=null and keywords3!=''">
+                and a.UserID = #{keywords3}
+            </if>
+        </where>
+    </select>
+
+    <!--完成递进查询-->
+    <!--1.根据排班日期查询午别-->
+    <select id="getSchedulingList05" resultType="map">
+        select distinct a.Noon from Scheduling a
+        <where>
+            <if test="keywords!=null and keywords!=''">
+                and SchedDate=#{keywords}
+            </if>
+            order by Noon limit #{startPage},#{count}
+        </where>
+    </select>
+    <!--2.根据日期，午别查询科室-->
+    <select id="getSchedulingList03" resultType="map">
+        select distinct a.SchedDate from Scheduling a,Department c
+        where a.DeptID=c.ID
+        <if test="keywords!=null and keywords!=''">
+            and SchedDate=#{keywords}
+        </if>
+        <if test="keywords2!=null and keywords2!=''">
+            and Noon=#{keywords2}
+        </if>
+        order by DeptID limit #{startPage},#{count}
+    </select>
+    <!--3.根据日期，午别，科室查询号别-->
+    <select id="getSchedulingList04" resultType="map">
+        select distinct d.RegistName, d.ID
+        from Scheduling a,
+        RegistLevel d,
+        User b
+        where a.UserID = d.ID
+        and b.RegistLeID = d.ID
+        and b.IsScheduling = '是'
+        <if test="keywords!=null and keywords!=''">
+            and a.SchedDate=#{keywords}
+        </if>
+        <if test="keywords2!=null and keywords2!=''">
+            and a.Noon=#{keywords2}
+        </if>
+        <if test="keywords3!=null and keywords3!=''">
+            and a.DeptID=#{keywords3}
+        </if>
+        order by d.ID limit #{startPage},#{count}
+    </select>
+
+    <!--4.根据日期，午别，科室，号别查询医生-->
+    <select id="getSchedulingList02" resultType="map">
+        select distinct b.RealName, b.ID
+        from Scheduling a,
+        RegistLevel d,
+        User b
+        where a.UserID = d.ID
+        and b.RegistLeID = d.ID
+        and b.IsScheduling = '是'
+        <if test="keywords!=null and keywords!=''">
+            and a.SchedDate=#{keywords}
+        </if>
+        <if test="keywords2!=null and keywords2!=''">
+            and a.Noon=#{keywords2}
+        </if>
+        <if test="keywords3!=null and keywords3!=''">
+            and a.DeptID=#{keywords3}
+        </if>
+        <if test="keywords4!=null and keywords4!=''">
+            and d.ID=#{keywords4}
+        </if>
+        order by b.ID limit #{startPage},#{count}
+    </select>
+    <!--5.根据排班医生的挂号额度（根据日期，午别，医生）-->
+    <select id="getSchedulingCount03" resultType="_int">
+        select a.ID,a.SchedDate
+        from Scheduling a,
+        RegistLevel d,
+        User b
+        where a.UserID = d.ID
+        and b.RegistLeID = d.ID
+        and b.IsScheduling = '是'
+        <if test="keywords!=null and keywords!=''">
+            and a.SchedDate=#{keywords}
+        </if>
+        <if test="keywords2!=null and keywords2!=''">
+            and a.Noon=#{keywords2}
+        </if>
+        <if test="keywords3!=null and keywords3!=''">
+            and a.DeptID=#{keywords3}
+        </if>
+    </select>
+    <!--6.根据午别，日期，医生查询挂号费-->
+    <select id="getSchedulingCount07" resultType="_float">
+        select distinct d.RegistFee
+        from Scheduling a,
+        RegistLevel d,
+        User b
+        where a.UserID = d.ID
+        and b.RegistLeID = d.ID
+        and b.IsScheduling = '是'
+        <if test="keywords!=null and keywords!=''">
+            and a.SchedDate=#{keywords}
+        </if>
+        <if test="keywords2!=null and keywords2!=''">
+            and a.Noon=#{keywords2}
+        </if>
+        <if test="keywords3!=null and keywords3!=''">
+            and a.DeptID=#{keywords3}
+        </if>
+    </select>
+</mapper>

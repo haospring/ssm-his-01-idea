@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neu.his.mapper.SettleCategoryMapper">
+    <!--带有分页参数的查询-->
+    <select id="getSettleCateList" resultType="map">
+        select * from SettleCategory
+        <where>
+            <if test="keywords!=null and keywords!=''">
+                SettleCode like concat('%',#{keywords},'%')
+            </if>
+            <if test="keywords!=null and keywords!=''">
+                or SettleName like concat('%',#{keywords},'%')
+            </if>
+        </where>
+        order by SequenceNo limit #{page},#{count}
+    </select>
+
+    <!--查询行数-->
+    <select id="getSettleCategoryCount" resultType="_int">
+        select count(*) from SettleCategory
+        <where>
+            <if test="keywords!=null and keywords!=''">
+                SettleCode like concat('%',#{keywords},'%')
+            </if>
+            <if test="keywords!=null and keywords!=''">
+                or SettleName like concat('%',#{keywords},'%')
+            </if>
+        </where>
+    </select>
+
+    <!--删除数据源-->
+    <delete id="deleteSettleCategory02">
+        delete from SettleCategory where ID in
+        <foreach collection="ids" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--更新删除标记-->
+    <delete id="deleteSettleCategory">
+        update SettleCategory set DelMark=0 where ID in
+        <foreach collection="ids" separator="," open="(" close=")" item="id">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--更新数据-->
+    <update id="updateSettleCategory" parameterType="map">
+        update SettleCategory
+        set SettleCode=#{SettleCode},
+            SettleName=#{SettleName},
+            SequenceNo=#{SequenceNo}
+        where ID = #{ID}
+    </update>
+
+    <!--添加数据-->
+    <insert id="addSettleCategory" parameterType="map">
+        insert into SettleCategory
+        set SettleCode=#{SettleCode},
+            SettleName=#{SettleName},
+            SequenceNo=#{SequenceNo}
+    </insert>
+</mapper>

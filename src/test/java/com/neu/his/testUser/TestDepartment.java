@@ -1,13 +1,11 @@
 package com.neu.his.testUser;
 
-import com.neu.his.mapper.DepartmentMapper;
 import com.neu.his.service.DepartmentService;
 import com.neu.his.service.impl.DepartmentServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import javax.naming.Context;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
